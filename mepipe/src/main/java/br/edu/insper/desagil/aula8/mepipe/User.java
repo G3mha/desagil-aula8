@@ -36,7 +36,7 @@ public class User {
 	public int totalOfLikes() {
 		int s = 0;
 		for (Video video : videos) {
-			s += video.likes.totalOf.size();
+			s += video.totalLikes();
 		}
 		return s;
 	}
@@ -44,7 +44,7 @@ public class User {
 	public int totalOfDislikes() {
 		int s = 0;
 		for (Video video : videos) {
-			s += video.dislikes.totalOf.size();
+			s += video.totalDislikes();
 		}
 		return s;
 	}

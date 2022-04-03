@@ -6,7 +6,7 @@ import java.util.List;
 public class Reaction {
     private List<String> reactions;
 
-    public Reaction(boolean like) {
+    public Reaction() {
         this.reactions = new ArrayList<>();
     }
 
@@ -16,9 +16,5 @@ public class Reaction {
 
     public List<String> getReactions() {
         return this.reactions;
-    }
-
-    public int totalOf() {
-        return this.reactions.size();
     }
 }

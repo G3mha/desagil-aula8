@@ -1,7 +1,5 @@
 package br.edu.insper.desagil.aula8.mepipe;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class Video {
@@ -29,6 +27,14 @@ public class Video {
 
 	public String getId() {
 		return this.id;
+	}
+
+	public int totalLikes() {
+		return this.likes.getReactions().size();
+	}
+
+	public int totalDislikes() {
+		return this.dislikes.getReactions().size();
 	}
 
 	public int numberOfAds() {
