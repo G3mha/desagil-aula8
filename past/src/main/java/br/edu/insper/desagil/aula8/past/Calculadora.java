@@ -2,7 +2,7 @@ package br.edu.insper.desagil.aula8.past;
 
 public class Calculadora {
 
-	public double executa(int a, int b, char op) {
+	public double executa(int a, char op, int b) {
 		if (op == '+') {
 			return a + b;
 		}
