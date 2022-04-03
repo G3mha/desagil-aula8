@@ -1,28 +1,23 @@
 package br.edu.insper.desagil.aula8.alfandega;
 
-public class ItemTarifado {
-	private String nome;
-	private double valor;
-	private double rate;
+public class ItemTarifado extends Item {
 	private double tarifa;
 
 	public ItemTarifado(String nome, double valor, double rate, double tarifa) {
-		this.nome = nome;
-		this.valor = valor;
-		this.rate = rate;
+		super(nome, valor, rate);
 		this.tarifa = tarifa;
 	}
 
 	public String getNome() {
-		return this.nome;
+		return super.getNome();
 	}
 
 	public double getValor() {
-		return this.valor;
+		return super.getValor();
 	}
 
 	public double getRate() {
-		return this.rate;
+		return super.getRate();
 	}
 
 	public double getTarifa() {

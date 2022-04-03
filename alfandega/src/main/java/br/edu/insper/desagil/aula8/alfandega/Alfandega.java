@@ -1,9 +1,10 @@
- package br.edu.insper.desagil.aula8.alfandega;
+package br.edu.insper.desagil.aula8.alfandega;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Alfandega {
+	private static final double TARIFA_MIN = 0.01;
 	private List<Item> itens;
 	private List<ItemTarifado> itensTarifados;
 
@@ -36,7 +37,7 @@ public class Alfandega {
 		for (Item item : this.itens) {
 			// Mesmo em itens sem tarifa, a alfândega cobra
 			// uma taxa de 1% Por quê? Porque eles podem.
-			total += item.getRate() * item.getValor() * 0.01;
+			total += item.getRate() * item.getValor() * TARIFA_MIN;
 		}
 		for (ItemTarifado itemTarifado : this.itensTarifados) {
 			total += itemTarifado.getRate() * itemTarifado.getValor() * itemTarifado.getTarifa();
