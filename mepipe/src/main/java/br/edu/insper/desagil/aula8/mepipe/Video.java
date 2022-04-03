@@ -7,20 +7,20 @@ import java.util.Map;
 public class Video {
 	private String id;
 	private String title;
-	private List<String> likes;
-	private List<String> dislikes;
 	private Map<Integer, String> ads;
+	private Reaction likes;
+	private Reaction dislikes;
 
 	public Video(String id, String title, Map<Integer, String> ads) {
 		this.id = id;
 		this.title = title;
-		this.likes = new ArrayList<>();
-		this.dislikes = new ArrayList<>();
 		this.ads = ads;
+		this.likes = new Reaction();
+		this.dislikes = new Reaction();
 	}
 
 	public String getTitle() {
-		return title;
+		return this.title;
 	}
 
 	public void setTitle(String title) {
@@ -28,15 +28,7 @@ public class Video {
 	}
 
 	public String getId() {
-		return id;
-	}
-
-	public List<String> getLikes() {
-		return likes;
-	}
-
-	public List<String> getDislikes() {
-		return dislikes;
+		return this.id;
 	}
 
 	public int numberOfAds() {
